@@ -5,4 +5,8 @@ router.get("/", (req, res, next) => {
   res.render("index");
 });
 
+router.get("/list", (req, res) =>
+  res.send(`Here we'll render the characters list`)
+);
+
 module.exports = router;

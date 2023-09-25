@@ -22,6 +22,9 @@ app.locals.appTitle = `${projectName}`;
 const index = require("./routes/index.routes");
 app.use("/", index);
 
+const movieCharactersRoutes = require("./routes/characters.routes");
+app.use("/characters", movieCharactersRoutes);
+
 // ❗ To handle errors. Routes that don't exist or errors that you handle in specific routes
 require("./error-handling")(app);
 
